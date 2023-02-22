@@ -1,0 +1,69 @@
+Peter has been given an assignment to implement the code to convert the temprature from FORENHITE to CELCIUS and vice versa. Kindly help him to implement the code such that user can choose the conversion type
+
+FORENHITE to CELCIUS CELCIUS to FORENHITE and then enter the value of temperature to be converted and display the temptrature in the appropriate format.
+
+If user enters the choice any thing else then print INVALID CHOICE
+
+Input Format
+
+First line will take the choice N (integer) as input i.e. 1 or 2 Second line will take the temperature (double) T as input
+
+Constraints
+
+N >0 and N < 3
+
+Output Format
+
+Prints the double value i.e. the temperature
+
+Sample Input 0
+
+1
+40.0
+Sample Output 0
+
+4.44
+
+
+---------------------------------CODE-----------------------------
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) 
+    {
+        Scanner in = new Scanner(System.in);
+        int x = in.nextInt();
+        double t = in.nextDouble();
+        double ft;
+        switch(x)
+        {
+            case 1:
+                {
+                    ft = (t-32)/1.8;
+                    System.out.printf("%.2f", ft);
+                    break;
+                }
+            case 2:
+                {
+                    ft = (t*1.8)+32;
+                    System.out.printf("%.1f", ft);
+                    break;
+                }
+            default:
+                {
+                    System.out.println("INVALID CHOICE");
+                    break;
+                }
+                
+        }
+        
+        
+    }
+}
