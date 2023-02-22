@@ -1,0 +1,59 @@
+Liz built up a software code taking number of 3 different color blocks as input. Considering the end users can enter floating point numbers too as at least 1 block of a color is broken. Design the code converting the not-full numbers to full numbers.
+
+Input Format
+
+Number of balls for three different colors.
+
+Constraints
+
+3 inputs separated with space can be floating points or integers.
+
+Output Format
+
+3 integer numbers
+
+Sample Input 0
+
+2.2 2 2
+Sample Output 0
+
+3 2 2
+
+
+---------------------CODE---------------------
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        double a = in.nextDouble();
+        double b = in.nextDouble();
+        double c = in.nextDouble();
+        if(a%(int)a != 0)
+        {
+            System.out.print((int)a + 1);
+        }
+        else
+            System.out.print((int)a);
+        if(b%(int)b != 0)
+        {
+            System.out.print(" "+(int)b + 1);
+        }
+        else
+            System.out.print(" "+(int)b);
+        if(c%(int)c != 0)
+        {
+            System.out.print(" "+(int)c + 1);
+        }
+        else
+            System.out.print(" "+(int)c);
+        
+        
+    }
+}
