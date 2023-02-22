@@ -1,0 +1,69 @@
+Jasmine and jack created 2 different arrays to store their products which they have purchased from super market. Then they compared their products to identify the count of similar products they have purchased
+
+Input Format
+
+Milk Toy Chair Stool Stool Bag Watch Milk
+
+Constraints
+
+Create two different String array of size 4 Compare and display the result in integers
+
+Output Format
+
+2
+
+Sample Input 0
+
+Milk Toy Chair Stool
+Stool Bag Watch Milk
+Sample Output 0
+
+2
+
+
+-------------------------CODE----------------------------
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) 
+    {
+        Scanner in = new Scanner(System.in);
+        String arr1[] = new String[4];
+        String arr2[] = new String[4];
+        
+        for(int i = 0; i<4; i++)
+        {
+            String s = in.next();
+            arr1[i] = s;
+        }
+        for(int i = 0; i<4; i++)
+        {
+            String s1 = in.next();
+            arr2[i] = s1;
+        }
+        
+        int count = 0;
+        for(int i = 0; i<4; i++)
+        {
+            int j = 3;
+            while(j>=0)
+            {
+                if(arr2[j].compareTo(arr1[i]) == 0)
+                {
+                    count++;
+                }
+                j--;
+            }
+            
+        }
+        System.out.println(count);
+        
+        
+    }
+}
