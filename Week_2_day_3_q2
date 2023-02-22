@@ -1,0 +1,53 @@
+A student will not be allowed to sit in exam if his/her attendence is less than 75%. Take following input from user Number of classes held Number of classes attended. And print percentage of class attended Is student is allowed to sit in exam or not.
+
+Input Format
+
+Number of classes held Number of classes attended.
+
+Constraints
+
+Number of classes held >= Number of classes attended. and both must be Positive integer
+
+Output Format
+
+percentage of class attended Is student is allowed to sit in exam or not.
+
+Sample Input 0
+
+100
+80
+Sample Output 0
+
+80
+Yes
+Explanation 0
+
+Explanation 0
+
+Number of classes held : 100 Number of classes attended : 80 And Output percentage of class attended : 80 Is student is allowed to sit in exam or not : Yes
+
+
+---------------------------------------CODE----------------------------------
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int T_no = in.nextInt();
+        int A_no = in.nextInt();
+        
+        int percentage = (A_no*100)/T_no;
+        System.out.println(percentage);
+        
+        if(percentage >= 75)
+            System.out.println("Yes");
+        else
+            System.out.println("No");
+    }
+}
