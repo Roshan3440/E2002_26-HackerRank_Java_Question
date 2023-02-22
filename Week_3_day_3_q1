@@ -1,0 +1,85 @@
+Sameer wants to develop a program for ATM. Help him by constructing the program for the same. In the program if user withdraws amount upto 1000 then machine will dispence Rs. 100 notes only. Minimum number of notes should be dispenced by the machine. Notes of denomination of 100,200,500 and 2000 are available in machine.
+
+Input Format
+
+One integer value between 100-20000.
+
+Constraints
+
+Maximum withdrawl amount should be 20000, Minimum should be 100 and amount should be in the multiple of 100 only.
+
+Output Format
+
+Print the number of notes dispenced and their denomination.
+
+Sample Input 0
+
+1100
+Sample Output 0
+
+1 100 Notes
+2 500 Notes
+Sample Input 1
+
+1550
+Sample Output 1
+
+Invalid Input
+
+____________________________________CODE_______________________________________
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        
+        if(n % 100 != 0 || n>20000 || n<100)
+        {
+            System.out.println("Invalid Input");
+            return;
+        }
+        
+        if(n <= 1000)
+        {
+            System.out.println(n/100 + " 100" + " Notes");
+        }
+        else
+        {
+            int num2k = n/2000;
+            int rem2k = n%2000;
+            
+            int num5 = rem2k/500;
+            int rem5 = rem2k%500;
+            
+            int num2 = rem5/200;
+            int rem2 = rem5%200;
+            
+            int num1 = rem2/100;
+            int rem1 = rem2%100;
+            
+            if(num1 !=0)
+            {
+                System.out.println(num1 + " 100" + " Notes");   
+            }
+            if(num2 !=0)
+            {
+                System.out.println(num2 + " 200" + " Notes");   
+            }
+            if(num5 !=0)
+            {
+                System.out.println(num5 + " 500" + " Notes");   
+            }
+            if(num2k !=0)
+            {
+                System.out.println(num2k + " 2000" + " Notes");
+            }      
+        }
+    }
+}
