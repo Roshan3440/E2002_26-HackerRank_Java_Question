@@ -1,0 +1,84 @@
+Sajal and Ruhi are playing a game. Sajal is going to tell one number and one operation (Even, Odd, Prime and Factorial), Ruhi have to apply the operation and tell the output.
+
+Input Format
+
+Two space seperated numbers, first number on which need to apply operation and second number will be 1 for checking the number is even or not, 2 for checking number is odd or not, 3 for checking number is prime or not and 4 for calculating factorial of number.
+
+Constraints
+
+First number will be positive integer value. Second number can be in range of 1 to 4.
+
+Output Format
+
+Yes / No for first three operations and an integer value if operation four is performed.
+
+Sample Input 0
+
+5 1
+Sample Output 0
+
+NO
+
+
+
+--------------------------------------CODE-------------------------
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int fn = in.nextInt();
+        int sn = in.nextInt();
+        
+        switch(sn)
+        {
+            case 1:
+            {
+                if(fn % 2 == 0)
+                    System.out.println("YES");
+                else
+                    System.out.println("NO");
+                break;
+            }
+            case 2:
+            {
+                if(fn % 2 != 0)
+                    System.out.println("YES");
+                else
+                    System.out.println("NO");
+                break;
+            }
+            case 3:
+            {
+                if(fn<1)
+                    System.out.println("NO");
+                for(int i = 2; i*i<fn; i++)
+                {
+                    if(fn%i == 0)
+                        System.out.println("NO");
+                    System.out.println("YES");
+                }
+                break;
+            }
+            case 4:
+            {
+                int fact = 1;
+                while(fn>0)
+                {
+                    fact = fact*fn;
+                    fn--;
+                }
+                System.out.println(fact);
+                break;
+            }
+            
+        }
+    }
+}
