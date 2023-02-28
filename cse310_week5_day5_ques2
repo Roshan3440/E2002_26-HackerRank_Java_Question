@@ -1,0 +1,32 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int a=scanner.nextInt();
+        int b=scanner.nextInt();
+        if(valid(a,b))
+        {
+            boolean result=isBigger(a, b);
+            System.out.println(result);
+        } 
+        else 
+        {
+            System.out.println("Invalid Input");
+        }
+    }
+    public static boolean isBigger(int a,int b) 
+    {
+        return a>b;
+    }
+    public static boolean valid(int a,int b) 
+    {
+        return a>=10 && a<=1000 && b>=10 && b<=1000;
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
